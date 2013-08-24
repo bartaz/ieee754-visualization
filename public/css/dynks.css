@@ -1,0 +1,24 @@
+.dynks-enabled, .dynks-moving {
+    cursor: ew-resize;
+}
+
+.dynks-enabled {
+    padding: 0 0.1em;
+    border-radius: 0.1em;
+
+    transition: 200ms box-shadow;
+    -webkit-transition: 200ms box-shadow;
+}
+
+.dynks-enabled:hover {
+    box-shadow: inset 0 0 5px #000;
+}
+
+.dynks-active {
+    box-shadow: inset 0 0 5px #000;
+    background: #FFC;
+}
+
+.dynks-out-of-range {
+    box-shadow: inset 0 0 10px #000;
+}

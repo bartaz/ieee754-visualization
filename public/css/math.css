@@ -1,0 +1,50 @@
+.math {
+    font-family: 'Cambria Math', Cambria, MathJax_Main,
+                 STIXGeneral, DejaVu Serif, DejaVu Sans,
+                 Times, Lucida Sans Unicode, OpenSymbol,
+                 Standard Symbols L, serif;
+
+    display: block;
+    clear: both;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.math .mrow { display: block; }
+.math .indented { padding-left: 0.7em; }
+
+.math .mi {
+    font-style: italic;
+}
+
+.math .mo {
+    font-size: 0.75em;
+}
+.math .msub > :last-child {
+    vertical-align: sub;
+    font-size: 65%;
+}
+
+.math .msup > :last-child {
+    vertical-align: super;
+    font-size: 65%;
+}
+
+.math .mfrac {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
+    font-size: 0.8em;
+}
+
+.math .mfrac > :first-child {
+    display: block;
+    border-bottom: .08em solid;
+    text-align: center;
+}
+
+.math .mfrac > :last-child {
+    display: block;
+    text-align: center;
+}

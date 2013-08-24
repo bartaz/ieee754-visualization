@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding: 1em;
+    font-size: 2em;
+}
+
+.visialization-exponential {
+    font-size: 2.5em;
+    margin: 1.5em 0 0 1.5em
+}

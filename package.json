@@ -1,0 +1,17 @@
+{
+  "name": "jsconf-numbers",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "node-static": "~0.7.0",
+    "webmake": "~0.3.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": "",
+  "author": "Bartek Szopka",
+  "license": "MIT"
+}
