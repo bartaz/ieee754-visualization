@@ -166,3 +166,30 @@
     border-color: #777;
 }
 
+
+.point-slider {
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+}
+
+label[for=point-slider] {
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    text-align: center;
+    line-height: 20px;
+    top: 100px;
+    left: 0;
+    transition: 200ms left;
+}
+
+label[for=point-slider]::after {
+    content: "";
+    vertical-align: top;
+    background: #000;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 5px;
+}
