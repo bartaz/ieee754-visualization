@@ -9,15 +9,15 @@ var projectPath  = __dirname;
 // Public folder path (statics)
 var staticsPath  = projectPath + '/public';
 
-// Path to js program file
-var programPath = __dirname + '/lib/exponential.js';
 // Server port:
 var port = 8000;
-// Url at which we want to serve generated js file
-var programUrl = '/js/exponential.js';
 
 staticServer = new staticServer(staticsPath);
 
+var bundles = {
+	'/js/exponential.js': __dirname + '/lib/exponential.js',
+	'/js/bits.js': __dirname + '/lib/bits.js'
+};
 
 // Initialize http server
 createServer(function (req, res) {
@@ -25,9 +25,9 @@ createServer(function (req, res) {
 	req.resume();
 	// Respond to request
 	req.on('end', function () {
-		if (req.url === programUrl) {
+		if ( bundles[req.url] ) {
 			// Generate bundle with Webmake
-
+			var programPath = bundles[ req.url ];
 			// Send headers
 			res.writeHead(200, {
 				'Content-Type': 'application/javascript; charset=utf-8',
@@ -36,7 +36,7 @@ createServer(function (req, res) {
 			});
 
 			var time = Date.now();
-			webmake(programPath, { cache: true }, function (err, content) {
+			webmake(bundles[req.url], { cache: true }, function (err, content) {
 				if (err) {
 					console.error("Webmake error: " + err.message);
 					res.end('console.error("Webmake error: ' + err.message + '");');

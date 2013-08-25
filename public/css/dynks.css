@@ -2,6 +2,7 @@
     cursor: ew-resize;
 }
 
+.number-input,
 .dynks-enabled {
     padding: 0 0.1em;
     border-radius: 0.1em;
@@ -10,10 +11,12 @@
     -webkit-transition: 200ms box-shadow;
 }
 
+.number-input:hover,
 .dynks-enabled:hover {
     box-shadow: inset 0 0 5px #000;
 }
 
+.number-input:focus,
 .dynks-active {
     box-shadow: inset 0 0 5px #000;
     background: #FFC;

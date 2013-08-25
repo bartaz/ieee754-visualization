@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 1em;
+    font-size: 2em;
+    -webkit-perspective: 100px;
+}
+
+.visualization-exponential {
+    font-size: 2.5em;
+    margin: 1.5em 0 0 1.5em
+}
+
+.number-input {
+    -webkit-appearance: none;
+    border: none;
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+    font-family: inherit;
+    margin-bottom: 1em;
+}
+
+.number-input:focus {
+    outline: none;
+}
+
+.bits-wrapper {
+    -webkit-transition: 300ms top;
+}
+
+
+.visualization-bits {
+    position: relative;
+}
+
+.visualization-bits .significand-wrapper .hidden { visibility: hidden; }
+.visualization-bits.expanded .significand-wrapper .hidden { visibility: visible; }
+
+
+.visualization-bits .significand-wrapper { top: 0px; }
+.visualization-bits.expanded .significand-wrapper { top: 300px; }
+
+.visualization-bits .exponent-wrapper { top: 0px; }
+.visualization-bits.expanded .exponent-wrapper { top: 150px; }
