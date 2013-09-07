@@ -56,6 +56,16 @@ body {
     margin: 5em 1em;
 }
 
+.visualization-bits .bits-wrapper .math {
+    opacity: 0;
+    transition: 200ms opacity;
+}
+
+.visualization-bits.expanded .bits-wrapper .math {
+    opacity: 1;
+    transition: 300ms 100ms opacity;
+}
+
 .visualization-bits .significand-wrapper .hidden { visibility: hidden; }
 .visualization-bits.expanded .significand-wrapper .hidden { visibility: visible; }
 
@@ -66,6 +76,9 @@ body {
 .visualization-bits.expanded .exponent-wrapper { top: 220px; }
 
 
+.visualization-bits.zoomed {
+    zoom: 1.2;
+}
 /* hover styles for part of equations related to hovered bits */
 
 [class*=significand-bit-] {
