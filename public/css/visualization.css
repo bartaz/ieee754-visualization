@@ -1,13 +1,32 @@
+html { height: 100%; }
+
 body {
     margin: 0;
-    padding: 1em;
     font-size: 2em;
-    -webkit-perspective: 100px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.visualization-wrapper {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
 }
 
 .visualization-exponential {
     font-size: 2.5em;
-    margin: 1.5em 0 0 1.5em
+    margin: 2em 0 0 2em;
+}
+
+.number-wrapper {
+    position: fixed;
+    padding: 0.5em 1em;
+    border-bottom: 1px dashed #AAA;
+    background: rgba(255,255,255,0.9);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 
 .number-input {
@@ -17,7 +36,9 @@ body {
     width: 100%;
     text-align: center;
     font-family: inherit;
-    margin-bottom: 1em;
+
+    box-sizing: border-box;
+    background: transparent;
 }
 
 .number-input:focus {
@@ -26,19 +47,20 @@ body {
 
 .bits-wrapper {
     -webkit-transition: 300ms top;
+    transition: 300ms top;
 }
 
 
 .visualization-bits {
     position: relative;
+    margin: 5em 1em;
 }
 
 .visualization-bits .significand-wrapper .hidden { visibility: hidden; }
 .visualization-bits.expanded .significand-wrapper .hidden { visibility: visible; }
 
-
 .visualization-bits .significand-wrapper { top: 0px; }
-.visualization-bits.expanded .significand-wrapper { top: 300px; }
+.visualization-bits.expanded .significand-wrapper { top: 500px; }
 
 .visualization-bits .exponent-wrapper { top: 0px; }
 .visualization-bits.expanded .exponent-wrapper { top: 150px; }

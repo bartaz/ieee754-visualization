@@ -21,7 +21,6 @@
 
     position: relative;
     overflow: hidden;
-    /* color: rgba(80,80,80,0.5); */
 
     cursor: pointer;
     -webkit-user-select: none;
@@ -127,6 +126,8 @@
 
 .significand-wrapper {
     margin-left: 180px;
+    padding-bottom: 200px;
+    padding-right: 1em;
 }
 
 .bits {
@@ -148,10 +149,10 @@
 .sign-title {
     position: absolute;
     font-size: 0.7em;
-    transform-origin: 10px 75%;
     -webkit-transform-origin: 10px 85%;
-    transform: rotate(-90deg);
+    transform-origin: 10px 85%;
     -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
 
 .bits-wrapper-title {
@@ -167,9 +168,16 @@
 }
 
 
+.exponent-wrapper .bits-wrapper-title {
+    width: 165px;
+}
+
+.significand-wrapper .bits-wrapper-title {
+    width: 780px;
+}
+
 .point-slider {
     position: absolute;
-    top: -99999px;
     left: -99999px;
 }
 

@@ -10,8 +10,16 @@
     line-height: 1.5;
 }
 
-.math .mrow { display: block; }
-.math .indented { padding-left: 0.7em; }
+.math .mrow {
+    display: block;
+    text-indent: -1.5em;
+    margin-left: 1.5em;
+    margin-bottom: 0.1em;
+}
+
+.math .indented > .mi:first-child {
+    visibility: hidden;
+}
 
 .math .mi {
     font-style: italic;
@@ -19,7 +27,14 @@
 
 .math .mo {
     font-size: 0.75em;
+    text-indent: 0;
 }
+
+.math .msub,
+.math .msup {
+    white-space: nowrap;
+}
+
 .math .msub > :last-child {
     vertical-align: sub;
     font-size: 65%;
@@ -36,6 +51,7 @@
     text-align: center;
 
     font-size: 0.8em;
+    text-indent: 0;
 }
 
 .math .mfrac > :first-child {

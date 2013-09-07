@@ -1,5 +1,5 @@
 <!doctype html>
-
+<meta charset="utf-8" />
 <title>IEEE-754 Floating Point representation explained</title>
 
 <link rel="stylesheet" href="/css/math.css" />
@@ -9,101 +9,164 @@
 
 
 <div class="number-wrapper math">
-    <input id="number-input" class="number-input" value="0.1"></input>
+    <input id="number-input" class="number-input" value="0.1" />
 </div>
 
-<div class="visualization-bits">
+<div class="visualization-wrapper">
+    <div class="visualization-bits expanded">
 
-    <div class="bits-wrapper sign-wrapper">
-        <em class="bits-wrapper-title"><span class="sign-title">sign</span>&nbsp;</em>
-        <div class="bits">
-            <span class="bit sign"></span>
+        <div class="bits-wrapper sign-wrapper">
+            <em class="bits-wrapper-title"><span class="sign-title">sign</span>&nbsp;</em>
+            <div class="bits">
+                <span class="bit sign"></span>
+            </div>
+        </div>
+        <div class="bits-wrapper exponent-wrapper">
+            <em class="bits-wrapper-title">exponent</em>
+            <div class="bits">
+                <span class="bit exponent"></span>
+                <span class="bit exponent"></span>
+                <span class="bit exponent"></span>
+                <span class="bit exponent"></span>
+                <span class="bit exponent"></span>
+                <span class="bit exponent"></span>
+                <span class="bit exponent"></span>
+                <span class="bit exponent"></span>
+                <span class="bit exponent"></span>
+                <span class="bit exponent"></span>
+                <span class="bit exponent"></span>
+            </div>
+
+            <div class="math" >
+
+                <span class="mrow">
+                    <span class="mi">e</span>
+                    <span class="mo">=</span>
+                    <span data-ieee754-value="exponentPowers"></span>
+                </span>
+
+                <span class="mrow indented">
+                    <span class="mi">e</span>
+                    <span class="mo">=</span>
+                    <span data-ieee754-value="exponentPowersComputed"></span>
+                </span>
+
+                <span class="mrow indented">
+                    <span class="mi">e</span>
+                    <span class="mo">=</span>
+                    <span class="mn" data-ieee754-value="exponent"></span>
+                </span>
+
+                <span class="mrow">
+                    <span class="mi">p</span>
+                    <span class="mo">=</span>
+                    <span class="mi">e</span>
+                    <span class="mo">&minus;</span>
+                    <span class="mn">1023</span>
+                </span>
+                <span class="mrow indented">
+                    <span class="mi">p</span>
+                    <span class="mo">=</span>
+                    <span class="mn" data-ieee754-value="exponentNormalized"></span>
+                </span>
+
+            </div>
+        </div>
+        <div class="bits-wrapper significand-wrapper">
+            <em class="bits-wrapper-title">significand</em>
+            <div class="bits">
+                <span class="bit hidden"></span>
+
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+
+                <span class="bit significand"></span>
+                <span class="bit significand"></span>
+
+                <label for="point-slider" id="point-slider-label"></label>
+                <input id="point-slider" class="point-slider" type="range" min="0" max="2047" step="1" />
+            </div>
+
+            <div class="math" >
+                <span class="mrow">
+                    <span class="mi">n</span>
+                    <span class="mo">=</span>
+                    <span data-ieee754-value="significandPowers"></span>
+                </span>
+
+                <span class="mrow indented">
+                    <span class="mi">n</span>
+                    <span class="mo">=</span>
+                    <span data-ieee754-value="significandPowersFractions"></span>
+                </span>
+
+
+                <span class="mrow indented">
+                    <span class="mi">n</span>
+                    <span class="mo">=</span>
+                    <span data-ieee754-value="significandPowersFractionsComputed"></span>
+                </span>
+
+                <span class="mrow indented">
+                    <span class="mi">n</span>
+                    <span class="mo">=</span>
+                    <span data-ieee754-value="significandPowersComputed"></span>
+                </span>
+            </div>
         </div>
     </div>
-    <div class="bits-wrapper exponent-wrapper">
-        <em class="bits-wrapper-title">exponent</em>
-        <div class="bits">
-            <span class="bit exponent"></span>
-            <span class="bit exponent"></span>
-            <span class="bit exponent"></span>
-            <span class="bit exponent"></span>
-            <span class="bit exponent"></span>
-            <span class="bit exponent"></span>
-            <span class="bit exponent"></span>
-            <span class="bit exponent"></span>
-            <span class="bit exponent"></span>
-            <span class="bit exponent"></span>
-            <span class="bit exponent"></span>
-        </div>
-
-    </div>
-    <div class="bits-wrapper significand-wrapper">
-        <em class="bits-wrapper-title">significand</em>
-        <div class="bits">
-            <span class="bit hidden"></span>
-
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-
-            <span class="bit significand"></span>
-            <span class="bit significand"></span>
-
-            <label for="point-slider" id="point-slider-label"></label>
-            <input id="point-slider" class="point-slider" type="range" min="0" max="2047" step="1" />
-        </div>
-
 </div>
 
 <script src="/js/bits.js"></script>
