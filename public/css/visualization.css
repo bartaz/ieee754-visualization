@@ -5,6 +5,7 @@ body {
     font-size: 2em;
     overflow: hidden;
     height: 100%;
+    cursor: default;
 }
 
 .visualization-wrapper {
@@ -76,9 +77,21 @@ body {
 .visualization-bits.expanded .exponent-wrapper { top: 220px; }
 
 
+.visualization-bits .full-equation {
+    opacity: 0;
+    position: absolute;
+    top: 130px;
+}
+
+.visualization-bits.final .full-equation {
+    opacity: 1;
+}
+
 .visualization-bits.zoomed {
     zoom: 1.2;
 }
+
+
 /* hover styles for part of equations related to hovered bits */
 
 [class*=significand-bit-] {

@@ -13,7 +13,7 @@
 </div>
 
 <div class="visualization-wrapper">
-    <div class="visualization-bits expanded">
+    <div class="visualization-bits final">
 
         <div class="bits-wrapper sign-wrapper">
             <em class="bits-wrapper-title"><span class="sign-title">sign</span>&nbsp;</em>
@@ -188,6 +188,63 @@
                     <span data-ieee754-value="absValue"></span>
                 </span>
             </div>
+        </div>
+
+        <div class="full-equation math">
+            <span class="mrow">
+                <span class="mi">n</span>
+                <span class="mo">=</span>
+                <span class="mn" data-ieee754-value="value"></span>
+            </span>
+            <span class="mrow indented nowrap">
+                <span class="mi">n</span>
+                <span class="mo">=</span>
+                <span class="msup">
+                    <span class="mn">&minus;1</span><span class="mn sign-bit-0" data-ieee754-value="bSign">0</span>
+                </span>
+                <span class="mo">&times;</span>
+                (<span data-ieee754-value="significandPowers"></span>)
+            </span>
+            <span class="mrow indented nowrap">
+                <span class="mi">n</span>
+                <span class="mo">=</span>
+                <span class="msup">
+                    <span class="mn">&minus;1</span><span class="mn sign-bit-0" data-ieee754-value="bSign">0</span>
+                </span>
+                <span class="mo">&times;</span>
+                <span class="msup">
+                    <span class="mn">2</span><span class="mn" data-ieee754-value="exponentNormalized"></span>
+                </span>
+                <span class="mo">&times;</span>
+                (<span data-ieee754-value="significandPowersNormalized"></span>)
+            </span>
+
+            <span class="mrow indented nowrap">
+                <span class="mi">n</span>
+                <span class="mo">=</span>
+                <span class="msup">
+                    <span class="mn">&minus;1</span><span class="mn sign-bit-0" data-ieee754-value="bSign">0</span>
+                </span>
+                <span class="mo">&times;</span>
+                <span class="msup">
+                    <span class="mn">2</span><span><span class="mn" data-ieee754-value="exponent"></span><span class="mo">&minus;</span><span class="mn">1023</span></span>
+                </span>
+                <span class="mo">&times;</span>
+                (<span data-ieee754-value="significandPowersNormalizedOne"></span>)
+            </span>
+            <span class="mrow indented nowrap">
+                <span class="mi">n</span>
+                <span class="mo">=</span>
+                <span class="msup">
+                    <span class="mn">&minus;1</span><span class="mi sign-bit-0">s</span>
+                </span>
+                <span class="mo">&times;</span>
+                <span class="msup">
+                    <span class="mn">2</span><span><span class="mi">e</span><span class="mo">&minus;</span><span class="mn">1023</span></span>
+                </span>
+                <span class="mo">&times;</span>
+                ( <span class="mn">1</span><span class="mo">+</span><span class="">&sum;</span><span class="msub"><span class="mi">b</span><span class="mi">52-i</span></span><span class="msup"><span class="mn">2</span><span class="mi">-i</span></span> )
+            </span>
         </div>
     </div>
 </div>
