@@ -10,6 +10,10 @@
     line-height: 1.5;
 }
 
+.math .nowrap {
+    white-space: nowrap;
+}
+
 .math .mrow {
     display: block;
     text-indent: -1.5em;

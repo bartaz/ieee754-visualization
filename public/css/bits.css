@@ -172,7 +172,8 @@
     width: 165px;
 }
 
-.significand-wrapper .bits-wrapper-title {
+.significand-wrapper .bits-wrapper-title,
+.significand-wrapper .math {
     width: 780px;
 }
 
