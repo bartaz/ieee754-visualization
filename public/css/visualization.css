@@ -64,3 +64,16 @@ body {
 
 .visualization-bits .exponent-wrapper { top: 0px; }
 .visualization-bits.expanded .exponent-wrapper { top: 150px; }
+
+
+/* hover styles for part of equations related to hovered bits */
+
+[class*=significand-bit-] {
+    padding: 0 0.1em;
+}
+
+.hover {
+    border-radius: 0.1em;
+    background: rgba(255, 255, 0, 0.2);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
