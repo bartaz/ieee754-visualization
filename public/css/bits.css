@@ -167,6 +167,9 @@
     border-color: #777;
 }
 
+.sign-wrapper .bits-wrapper-title {
+    width: 15px;
+}
 
 .exponent-wrapper .bits-wrapper-title {
     width: 165px;

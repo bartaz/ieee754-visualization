@@ -60,10 +60,10 @@ body {
 .visualization-bits.expanded .significand-wrapper .hidden { visibility: visible; }
 
 .visualization-bits .significand-wrapper { top: 0px; }
-.visualization-bits.expanded .significand-wrapper { top: 500px; }
+.visualization-bits.expanded .significand-wrapper { top: 570px; }
 
 .visualization-bits .exponent-wrapper { top: 0px; }
-.visualization-bits.expanded .exponent-wrapper { top: 150px; }
+.visualization-bits.expanded .exponent-wrapper { top: 220px; }
 
 
 /* hover styles for part of equations related to hovered bits */
