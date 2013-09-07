@@ -132,6 +132,7 @@
 
 .bits {
     margin-top: 0px;
+    height: 50px;
 }
 
 .significand-wrapper .bits {
