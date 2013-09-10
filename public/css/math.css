@@ -68,3 +68,31 @@
     display: block;
     text-align: center;
 }
+
+
+.math .msum {
+    position: relative;
+    display: inline-block;
+    text-indent: 0;
+    font-size: 1.2em;
+}
+
+.math .msum::before {
+    content: attr(data-from);
+    font-size: 0.4em;
+    position: absolute;
+    bottom: -1em;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.math .msum::after {
+    content: attr(data-to);
+    font-size: 0.4em;
+    position: absolute;
+    top: -0.6em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}

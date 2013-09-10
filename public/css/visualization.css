@@ -81,16 +81,22 @@ body {
     opacity: 0;
     position: absolute;
     top: 130px;
+    pointer-events: none;
 }
 
 .visualization-bits.final .full-equation {
     opacity: 1;
+    pointer-events: auto;
 }
 
 .visualization-bits.zoomed {
     zoom: 1.2;
 }
 
+.full-equation.collapsed .mrow { visibility: hidden }
+.full-equation.collapsed .mrow:first-child { visibility: visible }
+
+.full-equation .significand-sum { padding: 0.6em 0.1em; }
 
 /* hover styles for part of equations related to hovered bits */
 

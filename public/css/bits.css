@@ -126,7 +126,7 @@
 
 .significand-wrapper {
     margin-left: 180px;
-    padding-bottom: 200px;
+    padding-bottom: 400px;
     padding-right: 1em;
 }
 
@@ -137,6 +137,7 @@
 
 .significand-wrapper .bits {
     margin-bottom: 20px;
+    position: relative;
 }
 
 .exponent-wrapper {
@@ -192,7 +193,7 @@ label[for=point-slider] {
     height: 10px;
     text-align: center;
     line-height: 20px;
-    top: 100px;
+    top: 55px;
     left: 0;
     transition: 200ms left;
 }
