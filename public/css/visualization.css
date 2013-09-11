@@ -93,6 +93,35 @@ body {
     zoom: 1.2;
 }
 
+.significand-wrapper .bits::before,
+.significand-wrapper .bits::after {
+    content: "00000000000000000";
+    position: absolute;
+    font-size: 20px;
+    font-family: monospace;
+    line-height: 50px;
+    letter-spacing: 3px;
+    color: #BBB;
+
+    pointer-events: none;
+    opacity: 0;
+
+    transition: 300ms opacity;
+}
+
+.significand-wrapper .bits::before {
+    right: 794px;
+}
+
+.significand-wrapper .bits::after {
+    left: 782px;
+}
+
+.visualization-bits.expanded.show-significand-overflow .significand-wrapper .bits::before,
+.visualization-bits.expanded.show-significand-overflow .significand-wrapper .bits::after {
+    opacity: 1;
+}
+
 .full-equation.collapsed .mrow { visibility: hidden }
 .full-equation.collapsed .mrow:first-child { visibility: visible }
 
