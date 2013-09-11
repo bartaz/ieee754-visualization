@@ -184,7 +184,11 @@
 
 .point-slider {
     position: absolute;
-    left: -99999px;
+    left: 0;
+    top: 50px;
+    opacity: 0;
+    pointer-events: none;
+    width: 780px;
 }
 
 label[for=point-slider] {
