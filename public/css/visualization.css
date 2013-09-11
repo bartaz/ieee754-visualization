@@ -80,14 +80,42 @@ body {
 .visualization-bits .full-equation {
     opacity: 0;
     position: absolute;
-    top: 130px;
+    top: 1000px;
     pointer-events: none;
+    transition: 300ms opacity, 300ms top;
 }
 
 .visualization-bits.final .full-equation {
     opacity: 1;
     pointer-events: auto;
+    top: 130px;
 }
+
+
+.visualization-bits.final-step-1 .full-equation .mrow,
+.visualization-bits.final-step-2 .full-equation .mrow,
+.visualization-bits.final-step-3 .full-equation .mrow {
+    opacity: 0;
+}
+
+.visualization-bits.final-step-1 .full-equation .mrow:nth-child(1),
+.visualization-bits.final-step-1 .full-equation .mrow:nth-child(2) {
+    opacity: 1;
+}
+
+.visualization-bits.final-step-2 .full-equation .mrow:nth-child(1),
+.visualization-bits.final-step-2 .full-equation .mrow:nth-child(2),
+.visualization-bits.final-step-2 .full-equation .mrow:nth-child(3) {
+    opacity: 1;
+}
+
+.visualization-bits.final-step-3 .full-equation .mrow:nth-child(1),
+.visualization-bits.final-step-3 .full-equation .mrow:nth-child(2),
+.visualization-bits.final-step-3 .full-equation .mrow:nth-child(3),
+.visualization-bits.final-step-3 .full-equation .mrow:nth-child(4) {
+    opacity: 1;
+}
+
 
 .visualization-bits.zoomed {
     zoom: 1.2;
