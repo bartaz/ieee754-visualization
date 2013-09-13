@@ -1,11 +1,13 @@
-html { height: 100%; }
+html {
+    height: 100%;
+    cursor: default;
+}
 
 body {
     margin: 0;
     font-size: 2em;
     overflow: hidden;
     height: 100%;
-    cursor: default;
 }
 
 .visualization-wrapper {
