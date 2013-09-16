@@ -23,7 +23,7 @@ body {
 
 .number-wrapper {
     position: fixed;
-    padding: 0.5em 1em;
+    padding: 0.5em 1em 0.7em;
     border-bottom: 1px dashed #AAA;
     background: rgba(255,255,255,0.9);
     top: 0;
@@ -47,6 +47,28 @@ body {
 .number-input:focus {
     outline: none;
 }
+
+
+.toggle-details-button {
+    position: absolute;
+    width: 100%;
+    background: none;
+    border: none;
+    height: 22px;
+    font-size: 0.4em;
+    left: 0;
+    bottom: 0px;
+    line-height: 15px;
+    width: 100%;
+    cursor: pointer;
+    color: #777;
+}
+
+.toggle-details-button:hover, .toggle-details-button:focus {
+    color: #333;
+    background: rgba(245,245,245,0.7);
+}
+
 
 .bits-wrapper {
     -webkit-transition: 300ms top;
