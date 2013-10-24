@@ -1,19 +1,10 @@
 html {
-    height: 100%;
     cursor: default;
 }
 
 body {
     margin: 0;
     font-size: 2em;
-    overflow: hidden;
-    height: 100%;
-}
-
-.visualization-wrapper {
-    height: 100%;
-    width: 100%;
-    overflow: scroll;
 }
 
 .visualization-exponential {
@@ -106,6 +97,7 @@ body {
     position: absolute;
     top: 130px;
     pointer-events: auto;
+    width: 960px;
     transition: 300ms opacity, 300ms top;
 }
 
@@ -118,7 +110,7 @@ body {
 
 .significand-wrapper .bits::before,
 .significand-wrapper .bits::after {
-    content: "00000000000000000";
+    content: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
     position: absolute;
     font-size: 20px;
     font-family: monospace;
