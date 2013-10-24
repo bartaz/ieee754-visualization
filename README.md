@@ -18,7 +18,7 @@ I was playing around with different concepts to get the idea ready for JSConf. I
 
 If you are a developer and want to help making it better, or a designer who wants to make it look prettier or
 you know IEEE 754 and can see some error or a field for improvement - let me know by reporting an issue, sending
-pull request or contact me at [@bartaz on[(http://twitter.com/bartaz)] Twitter.
+pull request or contact me at [@bartaz](http://twitter.com/bartaz) on Twitter.
 
 
 ## License
