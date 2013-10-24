@@ -1,3 +1,8 @@
+/*
+  deeply inspired by CSS MathML fallback by Lea Verou
+  http://lea.verou.me/2013/03/use-mathml-today-with-css-fallback/
+*/
+
 .math {
     font-family: 'Cambria Math', Cambria, MathJax_Main,
                  STIXGeneral, DejaVu Serif, DejaVu Sans,
