@@ -7,7 +7,7 @@ var webmake      = require('webmake');
 // Project path:
 var projectPath  = __dirname;
 // Public folder path (statics)
-var staticsPath  = projectPath + '/public';
+var staticsPath  = projectPath;
 
 // Server port:
 var port = 8000;
@@ -15,8 +15,7 @@ var port = 8000;
 staticServer = new staticServer(staticsPath);
 
 var bundles = {
-	'/js/exponential.js': __dirname + '/lib/exponential.js',
-	'/js/bits.js': __dirname + '/lib/bits.js'
+	'/js/all.js': __dirname + '/src/bits.js'
 };
 
 // Initialize http server
