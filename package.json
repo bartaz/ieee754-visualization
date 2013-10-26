@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "description": "",
   "main": "server.js",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "node-static": "~0.7.0",
     "webmake": "~0.3.20"
   },
+  "devDependencies": {},
   "scripts": {
     "start": "node server.js",
     "build": "./node_modules/webmake/bin/webmake lib/bits.js public/js/bits.js"
